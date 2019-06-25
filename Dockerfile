@@ -4,6 +4,6 @@ RUN apt-get install -y python gcc g++ make
 WORKDIR home/
 ADD libuv ./libuv/
 ADD gyp ./gyp/
-ADD build.gyp main.cc compile.sh ./
+ADD build.gyp main.cc compile.sh run-local.sh ./
 RUN ./compile.sh
 CMD ./build/out/Default/libuv-stripped
